@@ -21,12 +21,8 @@
     },
     "scripts": {
         "clean": "rm -rf lib",
-        "build:flow": "flow-copy-source src/ lib/ --ignore __test__/**/*",
-        "build:babel": "babel src/ --out-dir lib/ --ignore __test__",
         "build": "npm run clean && npm run build:babel && npm run build:flow",
         "storybook": "start-storybook -p 6006",
-        "test": "flow check && jest src/",
-        "prepublish": "npm test && npm run build",
         "precommit": "pretty-quick --staged"
     },
     "author": "Jelle Versele",
